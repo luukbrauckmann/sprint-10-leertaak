@@ -1,3 +1,109 @@
-<h1>Partners</h1>
+<section class="partners page">
+    <header class="page__header">
+        <h1>Partners</h1>
+    </header>
+    <div class="page__content">
 
-<%= JSON.stringify(websites[0]) %>
+        <section class="filter-section">
+            <!-- <h2>Filters</h2> -->
+            <form action="/projects" method="post">
+                <label>
+                    Pagina URL: 
+                    <input required type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>" >
+                </label>
+                <label> 
+                    Partner: 
+                    <select required name="websiteId" id="websiteId" value="<%= locals.values?.websiteId ?? '' %>">
+                        <% websites.forEach(website => { %>
+                            <option value="<%= website.id %>">
+                                <%= website.titel %>
+                            </option>
+                        <% }) %>
+                    </select>
+                </label>
+        
+                <button type="submit">Opslaan</button>
+            </form>
+            <button class="primair" id="new-project-button" hidden>nieuw project</button>
+        </section>
+    
+        <section class="projects-overview">
+            <div class="all-projects-heading">
+                <h2>Alle projecten</h2>
+                <form id="sorter" method="get" action="/partners">
+                        <label>Sorteren op: 
+                            <select name="sort">
+                                <% for (let sortOption of sortOptions) { %>
+                                    <option value="<%= JSON.stringify(sortOption) %>" <% if (JSON.stringify(currentSort) === JSON.stringify(sortOption)) { %>selected<% } %>><%- sortOption.label %></option>
+                                <% } %>
+                            </select>
+                        </label>
+                        <button class="primair">OK</button>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="all-projects">
+                <% projects.forEach(project => { %>
+                    <section class="project">
+                        <img class="open-icon" src="/images/svg/open.svg" alt="">
+                        <a class="to-toolboard" href="/toolboard?id=<%= project.id %>" title="Open <%= project.url %> van <%= project.website.titel %> op het Toolboard"></a>
+    
+                        <div class="project-summary">
+                            <img width="54" src="" alt="">
+                            <h3>
+                            <%= project.website.titel %>
+                        </h3>
+                        <a href="<%= project.url %>">
+                            <%= project.url %>
+                        </a>
+                        </div>
+    
+                        <% let progress; %>
+                             <% if (project.checks.length != 0) { %>
+                                <% progress = project.checks[0].succescriteria.length %> 
+                                <% } else { %>
+                                    <% progress = 0; %>
+                                    <% } %>
+    
+                        <div class="project-progress">
+                            <progress value="<%= progress %>" max="64"></progress>
+                        <p><%= progress %> van de 64</p>
+                        </div>
+                        
+                        
+                    </section>
+                <% }) %>
+            </div>
+        </section>
+    
+        <dialog id="new-project-dialog" hidden>
+    
+            <form action="/projects" method="post">
+                <div class="dialog-heading">
+                    <h2>Maak nieuw project aan</h2>
+            <button type="button" id="close"><img src="/images/svg/cancel.svg" alt="sluit"></button>
+    
+                </div>
+    
+            <label>
+                Pagina URL: 
+                <input placeholder="https://gvb-online.nl/flex/" required type="url" name="url" id="url" value="<%= locals.values?.url ?? '' %>" >
+            </label>
+            <label> 
+                Partner: 
+                <select required name="websiteId" id="websiteId" value="<%= locals.values?.websiteId ?? '' %>">
+                    <% websites.forEach(website => { %>
+                        <option value="<%= website.id %>">
+                            <%= website.titel %>
+                        </option>
+                    <% }) %>
+                </select>
+            </label>
+    
+            <button type="submit">Opslaan</button>
+        </form>
+        </dialog>
+
+    </div>
+</section>
