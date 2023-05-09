@@ -1,92 +1,61 @@
-<!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#D4005B" />
+<div class="styleguide">
+  <nav class="menu">
+    <a class="menu__menu-item" href="/styleguide/introductie">Introductie</a>
+    <a class="menu__menu-item" href="/styleguide/typografie">Typografie</a>
+    <a class="menu__menu-item" href="/styleguide/knoppen">Knoppen</a>
+  </nav>
 
-    <meta name="keywords" content="Vervoerregio Amsterdam wcag" />
-    <meta name="description" content="Vervoerregio Amsterdam wcag" />
-    <meta
-      name="author"
-      content="Luuk Brauckmann, Sascha Davidson, Tom Poortman"
-    />
+  <section class="page">
+    <header class="page__header">
+      <nav class="breadcrumbs">
+        <a class="breadcrumbs__item">
+          <span class="breadcrumbs__item__icon">
+            <i class="fa-solid fa-code"></i>
+          </span>
+          <span class="breadcrumbs__item__label">Styleguide</span>
+        </a>
+      </nav>
+      <h1><%- content.title %></h1>
+    </header>
 
-    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/styles/styleguide.css" />
+    <div class="page__content">
+      <p><%- content.intro %></p>
 
-    <link rel="stylesheet" href="/icons/fontawesome/css/fontawesome.css" />
-    <link rel="stylesheet" href="/icons/fontawesome/css/solid.css" />
+      <% for (let example of content.examples) { %>
+      <article class="card example-card">
+        <header class="card__header">
+          <h2><%- example.title %></h2>
+        </header>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css"
-    />
-
-    <script src="/scripts/scripts.js" defer></script>
-
-    <title><%- title %></title>
-  </head>
-  <body class="styleguide">
-    <nav class="menu">
-      <a class="menu__item" href="/styleguide/introductie">Introductie</a>
-      <a class="menu__item" href="/styleguide/typografie">Typografie</a>
-      <a class="menu__item" href="/styleguide/knoppen">Knoppen</a>
-    </nav>
-
-    <section class="page">
-      <header class="page__header">
-        <nav class="breadcrumbs">
-          <a class="breadcrumbs__item">
-            <span class="breadcrumbs__item__icon">
-              <i class="fa-solid fa-code"></i>
-            </span>
-            <span class="breadcrumbs__item__label">Styleguide</span>
-          </a>
-        </nav>
-        <h1><%- content.title %></h1>
-      </header>
-
-      <div class="page__content">
-        <p><%- content.intro %></p>
-
-        <% for (let example of content.examples) { %>
-        <article class="card example-card">
-          <header class="card__header">
-            <h2><%- example.title %></h2>
-          </header>
-
-          <div class="card__content">
-            <article class="styleguide-example">
-              <header class="styleguide-example__header">
-                <h3>Beschrijving</h3>
-              </header>
-              <div class="styleguide-example__content">
-                <%- example.description %>
-              </div>
-            </article>
-            <article class="styleguide-example">
-              <header class="styleguide-example__header">
-                <h3>Voorbeeld</h3>
-              </header>
-              <div class="styleguide-example__content">
-                <pre><%- example.code.code %></pre>
-              </div>
-            </article>
-            <article class="styleguide-example">
-              <header class="styleguide-example__header">
-                <h3>HTML</h3>
-              </header>
-              <div class="styleguide-example__content">
-                <pre><code><%- example.code.value %></code></pre>
-              </div>
-            </article>
-          </div>
-        </article>
-        <% } %>
-      </div>
-    </section>
-  </body>
-</html>
+        <div class="card__content">
+          <article class="styleguide-example">
+            <header class="styleguide-example__header">
+              <h3>Beschrijving</h3>
+            </header>
+            <div class="styleguide-example__content">
+              <%- example.description %>
+            </div>
+          </article>
+          <article class="styleguide-example">
+            <header class="styleguide-example__header">
+              <h3>Voorbeeld</h3>
+            </header>
+            <div class="styleguide-example__content">
+              <pre><%- example.code.code %></pre>
+            </div>
+          </article>
+          <article class="styleguide-example">
+            <header class="styleguide-example__header">
+              <h3>HTML</h3>
+            </header>
+            <div class="styleguide-example__content">
+              <pre><code><%- example.code.value %></code></pre>
+            </div>
+          </article>
+        </div>
+      </article>
+      <% } %>
+    </div>
+  </section>
+</div>
 

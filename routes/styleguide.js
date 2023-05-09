@@ -110,7 +110,8 @@ const options = {
 	path: '/styleguide',
 	title: 'styleguide',
 	template: './styleguide.ejs',
-	styles: '/styles.styleguide.css',
+	styles: 'styleguide.css',
+	mainClass: 'styleguide'
 }
 
 styleguide.get('/styleguide', async (request, response) => response.redirect('/styleguide/introductie'))
@@ -122,7 +123,7 @@ styleguide.get('/styleguide/**', async (request, response) => {
 	const pageContent = content[slug]
 	options.content = pageContent
 	if (!pageContent) response.redirect('**')
-	else response.render('styleguide', options)
+	else response.render('index', options)
 })
 
 export default styleguide

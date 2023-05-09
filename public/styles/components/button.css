@@ -33,12 +33,18 @@
   --color: #ff4646;
 }
 
+.button--icon {
+  padding: 0.5em;
+}
+
 .button * {
   color: white;
   pointer-events: none;
 }
 
 .button__icon {
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .button__label {

@@ -1,0 +1,43 @@
+.start.page {
+  padding: 1rem var(--body-padding);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/images/vervoerregio-amsterdam-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  max-height: 1080px;
+  position: relative;
+}
+
+.start.page::before {
+  content: "";
+  height: 2em;
+  width: 100%;
+  background: rgb(185, 0, 95);
+  background: linear-gradient(
+    90deg,
+    rgba(185, 0, 95, 1) 0%,
+    rgba(227, 0, 89, 0) 100%
+  );
+  position: absolute;
+  left: 0;
+  bottom: 0em;
+}
+
+.start.page::after {
+  content: "";
+  height: 4em;
+  width: 100%;
+  background: rgb(185, 0, 95);
+  background: linear-gradient(
+    90deg,
+    rgba(185, 0, 95, 1) 0%,
+    rgba(227, 0, 89, 1) 100%
+  );
+
+  position: absolute;
+  left: 0;
+  bottom: -4em;
+}
+

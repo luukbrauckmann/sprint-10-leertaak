@@ -1,0 +1,60 @@
+.styleguide {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1rem;
+  padding: 1rem var(--body-padding);
+}
+
+.styleguide .example-card .card__content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.styleguide-example {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5em;
+}
+
+.styleguide-example__header * {
+  color: initial;
+}
+
+pre {
+  background: var(--background);
+  padding: 1rem;
+  border: 1px solid var(--background);
+  border-radius: 1rem;
+  position: relative;
+}
+
+pre * {
+  font-family: var(--font-family);
+}
+
+pre > code {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.js-enabled pre > code {
+  cursor: pointer;
+}
+
+.js-enabled pre > code::after {
+  content: "\f0c5";
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .styleguide {
+    grid-template-columns: 20rem 1fr;
+  }
+}
+

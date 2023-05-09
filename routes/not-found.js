@@ -6,7 +6,7 @@ const options = {
 	path: '**',
 	title: 'Niet gevonden',
 	template: './not-found.ejs',
-	styles: '/styles/start.css',
+	styles: 'start.css',
 }
 
 notFoundPage.get('**', (request, response) => response.render('index', options))

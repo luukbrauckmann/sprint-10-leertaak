@@ -6,7 +6,7 @@ const options = {
 	path: '/new-checklist',
 	title: 'new checklist',
 	template: './new-checklist.ejs',
-	styles: '/styles/start.css',
+	styles: 'start.css',
 }
 
 newChecklist.get('/new-checklist', (request, response) => response.render('index', options))

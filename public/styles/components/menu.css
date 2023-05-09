@@ -1,0 +1,47 @@
+.menu {
+  --border-radius: 1rem;
+  display: flex;
+}
+
+.menu,
+.menu--list {
+  flex-flow: column nowrap;
+}
+
+.menu--bar {
+  flex-flow: row nowrap;
+  overflow: hidden;
+  height: fit-content;
+  background: white;
+}
+
+.menu__menu-item {
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+
+.menu__menu-item:first-child,
+.menu--list .menu__menu-item:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.menu__menu-item:last-child,
+.menu--list .menu__menu-item:last-child {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.menu--bar .menu__menu-item {
+  border-radius: 0;
+}
+
+.menu-item__icon {
+  height: 1em;
+  width: 1em;
+  display: block;
+}
+

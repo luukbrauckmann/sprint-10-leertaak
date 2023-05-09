@@ -1,28 +1,23 @@
 document.documentElement.classList.add('js-enabled')
 
-// if javascript exist
-test()
 
-function test(){
+// const nav = document.querySelector("nav");
+// const navContainer = document.querySelector("#nav-id-container");
 
+// console.log(navContainer);
 
-const nav = document.querySelector("nav");
-const navContainer = document.querySelector("#nav-id-container");
+// const menuBtn = document.querySelector("#menu");
+// const searchBar = document.querySelector("#search-bar-id");
 
-console.log(navContainer);
+// navContainer.classList.add("nav-js-style");
+// nav.classList.add("nav-design");
+// searchBar.classList.add("search-bar-js");
 
-const menuBtn = document.querySelector("#menu");
-const searchBar = document.querySelector("#search-bar-id");
-
-navContainer.classList.add("nav-js-style");
-nav.classList.add("nav-design");
-searchBar.classList.add("search-bar-js");
-
-menuBtn.hidden = false;
-menuBtn.addEventListener("click", () => {
-    navContainer.classList.toggle("nav-active");
-    searchBar.classList.toggle("search-bar-active");
-});
-}
+// menuBtn.hidden = false;
+// menuBtn.addEventListener("click", () => {
+//     navContainer.classList.toggle("nav-active");
+//     searchBar.classList.toggle("search-bar-active");
+// });
+// }
 
 // console.log(nav)

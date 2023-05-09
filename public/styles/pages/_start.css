@@ -1,0 +1,265 @@
+.hero {
+  height: 100vh;
+  height: 100svh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/vervoerregio-amsterdam-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  max-height: 1080px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo-container {
+  padding: 0.5rem;
+  background-color: #fff;
+  z-index: 3;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+
+.logo {
+  width: 100%;
+  max-width: 193px;
+  padding: 0.5rem;
+}
+
+header .menu {
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-js-style {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.nav-active {
+  transform: translate(0, 100%);
+}
+
+.nav-container {
+  z-index: 2;
+}
+
+nav {
+  position: relative;
+  background-color: white;
+  transition: all 0.3s ease-out;
+}
+
+.nav-design {
+  margin: 1rem;
+  border-radius: 6px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+header ul li {
+  list-style-type: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+header ul li a:is(:hover, :focus) {
+  color: var(--primary-color);
+}
+
+header ul li button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+  font-family: Regular, san-serif;
+}
+
+.search-bar {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  transform: translate(0, 150%);
+  width: calc(100% - 2rem);
+  padding: 0.4rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: Regular, san-serif;
+  transition: all 0.3s ease-out;
+}
+
+.search-bar-js {
+  left: 0;
+  width: 100%;
+  transform: translate(0, 200%);
+}
+
+.search-bar-active {
+  transform: translate(0, 150%);
+}
+
+.curve {
+  height: 3rem;
+  display: none;
+}
+
+.hero .hero-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 4rem 1rem 4rem 1rem;
+  transition: all 0.3s ease-out;
+}
+
+.bottom-bar {
+  width: 100%;
+  /* bottom: 0;
+  position: absolute; */
+}
+
+.bottom-bar-verloop {
+  height: 2em;
+  background: rgb(185, 0, 95);
+  background: linear-gradient(
+    90deg,
+    rgba(185, 0, 95, 1) 0%,
+    rgba(227, 0, 89, 0) 100%
+  );
+}
+
+.bottom-bar-box {
+  height: 4em;
+  background: rgb(185, 0, 95);
+  background: linear-gradient(
+    90deg,
+    rgba(185, 0, 95, 1) 0%,
+    rgba(227, 0, 89, 1) 100%
+  );
+}
+
+@media screen and (min-width: 600px) {
+  header nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  header {
+    flex-direction: row;
+  }
+
+  .logo {
+    max-width: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .nav-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    transform: translate(0);
+  }
+
+  nav {
+    margin: 0;
+    border-radius: 0;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+  }
+
+  .nav-design {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  header nav ul {
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  header nav ul li {
+    padding: 0;
+  }
+
+  header nav ul li a,
+  header nav ul li button {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .search-bar {
+    left: auto;
+    transform: translate(0, 150%);
+    max-width: 445px;
+    right: 1rem;
+    bottom: 0;
+  }
+
+  .curve {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .logo-container {
+    padding-left: 10%;
+  }
+
+  nav {
+    padding-right: 10%;
+  }
+
+  .search-bar {
+    right: 10%;
+  }
+
+  .hero .hero-title {
+    padding: 4rem 10%;
+  }
+}
+

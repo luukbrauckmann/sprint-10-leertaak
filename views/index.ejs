@@ -15,16 +15,16 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/styles/styles.css" />
-    <link rel="stylesheet" href="<%- styles %>" />
+    <link rel="stylesheet" href="/styles/pages/<%= styles %>" />
 
-    <script src="scripts/scripts.js" defer></script>
+    <script src="/scripts/scripts.js" defer></script>
 
     <title><%- title %></title>
   </head>
   <body>
-    <header><%- include('./partials/header.ejs') %></header>
+    <%- include('./partials/header.ejs') %>
     <main><%- include(template) %></main>
-    <footer><%- include('./partials/footer.ejs') %></footer>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>
 
