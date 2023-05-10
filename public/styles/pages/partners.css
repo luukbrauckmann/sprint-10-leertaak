@@ -29,9 +29,10 @@
 }
 
 .partners.page {
+  margin-top: 2rem;
   padding: 1rem var(--body-padding);
-  min-height: 400px;
-  max-height: 1080px;
+  /* min-height: 400px;
+  max-height: 1080px; */
   position: relative;
 }
 
@@ -226,3 +227,4 @@ input:hover {
 .project:hover .open-icon {
   opacity: 1;
 }
+
