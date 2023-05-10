@@ -20,7 +20,7 @@ Toolgankelijk is een tool waar de partners van Vervoerregio Amsterdram kunnen zi
 
 <h2 id="gebruik">🖥️ Gebruik</h2>
 
-***
+Deze website is bedoeld voor de medewerkers van Vervoerregio Amsterdam en de Styleguide versie is voor developers. Op deze website kun je een overzicht zien van partner websites. Je kunt partner websites toevoegen en pagina urls toevoegen die dan gecontroleerd kunnen worden op hoe toegankelijk ze zijn. Als developer kun je in de styleguide code voorbeelden vinden en deze kopieren voor gebruik.
 
 <h2 id="kenmerken">✨ Kenmerken</h2>
 
