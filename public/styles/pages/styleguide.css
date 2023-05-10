@@ -1,8 +1,18 @@
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../../fonts/fontawesome/fa-solid-900.woff2") format("woff2"),
+    url("../../fonts/fontawesome/fa-solid-900.ttf") format("truetype");
+}
+
 .styleguide {
   display: grid;
   grid-template-columns: 100%;
   gap: 1rem;
   padding: 1rem var(--body-padding);
+  margin-top: 2rem;
 }
 
 .styleguide .example-card .card__content {
@@ -19,6 +29,21 @@
 
 .styleguide-example__header * {
   color: initial;
+}
+
+.styleguide-example__content .button__icon {
+  visibility: hidden;
+  position: relative;
+}
+
+.styleguide-example__content .button__icon::after {
+  visibility: visible;
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 pre {
@@ -45,8 +70,8 @@ pre > code {
 
 .js-enabled pre > code::after {
   content: "\f0c5";
-  font-family: var(--fa-style-family, "Font Awesome 6 Free");
-  font-weight: var(--fa-style, 900);
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   position: absolute;
   top: 1rem;
   right: 1rem;

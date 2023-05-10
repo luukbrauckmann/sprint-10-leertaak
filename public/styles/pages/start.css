@@ -8,6 +8,8 @@
   min-height: 400px;
   max-height: 1080px;
   position: relative;
+  justify-content: center;
+  margin-bottom: 4em;
 }
 
 .start.page::before {

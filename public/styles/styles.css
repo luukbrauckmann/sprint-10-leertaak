@@ -129,9 +129,62 @@ body {
   color: var(--text-color);
 }
 
-.body-header {
-  padding: 1rem var(--body-padding);
+body {
   display: flex;
+  flex-flow: column nowrap;
+}
+
+.body-header,
+.body-footer {
+  flex: 0;
+}
+
+body > main {
+  flex: 1;
+}
+
+.body-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -2rem;
+}
+
+.body-header__image {
+  background: white;
+  padding-block: 1rem;
+  padding-inline: var(--body-padding) 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.body-header__image::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  transform: translate(-1em, 2.25em);
+  width: auto;
+  height: 100%;
+  aspect-ratio: 2/1;
+  background: transparent;
+  border-top-left-radius: 2.5em;
+  box-shadow: -2.5em -4.25em 0 white;
+  z-index: 1;
+}
+
+.body-header__image > svg {
+  height: 3rem;
+}
+
+.body-header__nav {
+  flex: 1;
+  padding-inline: 2.5rem var(--body-padding);
+  z-index: 2;
+}
+
+.body-footer {
+  padding: 1rem var(--body-padding);
+  background: var(--primary-color);
 }
 
 @media (min-width: 36rem) {

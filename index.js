@@ -1,4 +1,5 @@
 import { fontawesome } from './helpers/fontawesome.js'
+import { highlightjs } from './helpers/highlight.js'
 
 import express from 'express'
 import compression from 'compression'
@@ -26,6 +27,7 @@ server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 
 fontawesome(server)
+highlightjs(server)
 
 /* Routes */
 server.get('/', startPage)

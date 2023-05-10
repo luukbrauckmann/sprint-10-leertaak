@@ -3,6 +3,7 @@
   font-size: 1rem;
   display: inline-flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 0.5em;
   background: var(--color);
   border: 1px solid var(--color);
@@ -21,13 +22,13 @@
   --color: #ffd05f;
 }
 .button--info {
-  --color: #46becd;
+  --color: #606eb3;
 }
 .button--success {
   --color: #25ae93;
 }
 .button--help {
-  --color: #606eb3;
+  --color: #46becd;
 }
 .button--danger {
   --color: #ff4646;
