@@ -4,7 +4,8 @@
 </h1>
 
 Foto van de voorpagina
-***
+<img width="100%" alt="image" src="https://github.com/luukbrauckmann/sprint-10-leertaak/assets/112861160/701a0580-dd25-4369-bb06-2aabe661c73e">
+
 
 <h2 id="inhoud">📦 Inhoud</h2>
 
