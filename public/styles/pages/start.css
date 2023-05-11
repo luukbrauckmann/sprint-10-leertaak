@@ -1,20 +1,22 @@
 .start.page {
-  padding: 1rem var(--body-padding);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("/images/vervoerregio-amsterdam-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: calc(100vh - 70px - 6rem);
+  height: calc(100svh - 70px - 6rem);
   min-height: 400px;
-  max-height: 1080px;
+  max-height: 800px;
   position: relative;
-  justify-content: center;
-  margin-bottom: 4em;
+  /* justify-content: center; */
+  margin-bottom: 6em;
+  padding: calc(3rem + 1rem) var(--body-padding) 0 var(--body-padding);
 }
 
 .start.page::before {
   content: "";
-  height: 2em;
+  height: 3em;
   width: 100%;
   background: rgb(185, 0, 95);
   background: linear-gradient(
@@ -29,7 +31,7 @@
 
 .start.page::after {
   content: "";
-  height: 4em;
+  height: 6em;
   width: 100%;
   background: rgb(185, 0, 95);
   background: linear-gradient(
@@ -40,6 +42,12 @@
 
   position: absolute;
   left: 0;
-  bottom: -4em;
+  bottom: -6em;
 }
 
+@media screen and (min-width: 770px) {
+  .start.page {
+    height: 50vh;
+    height: 50Svh;
+  }
+}

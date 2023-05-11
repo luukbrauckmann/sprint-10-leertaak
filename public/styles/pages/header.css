@@ -233,7 +233,7 @@ body > header .bottom-bar-box {
   body > header .search-bar {
     left: auto;
     transform: translate(0, 150%);
-    max-width: 350px;
+    max-width: 377px;
     right: var(--body-padding);
     bottom: 0;
   }
@@ -242,4 +242,3 @@ body > header .bottom-bar-box {
     display: block;
   }
 }
-

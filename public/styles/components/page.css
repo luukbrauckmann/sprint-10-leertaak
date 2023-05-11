@@ -1,16 +1,69 @@
 .page {
   display: flex;
-  flex-flow: column nowrap;
   gap: 1rem;
+  justify-content: space-between;
+}
+
+.page__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  padding-bottom: 3rem;
 }
 
 .page__header h1 {
-  font-size: 2.25rem;
+  font-size: 2rem;
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-family: light, san-serif;
+  color: black;
 }
 
-.page__content {
+.page__header h1 > span {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  font-family: medium, san-serif;
+  color: white;
+}
+
+.page__header .text-color,
+.text-color {
+  color: white;
+}
+
+.page__header__image {
+  width: fit-content;
+  display: none;
+}
+
+.page__header__image img {
+  object-fit: contain;
+  object-position: bottom;
+  width: inherit;
+  display: none;
+}
+
+.page__content{
+  padding: 5rem var(--body-padding) 5rem var(--body-padding);
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   gap: 1rem;
 }
 
+.page__content > .content__container{
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 770px) {
+  .page__header__image img {
+    display: block;
+  }
+
+  .page__header__image {
+    display: block;
+  }
+}
